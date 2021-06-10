@@ -28,7 +28,8 @@ dateTime()
 
     FILE *log;
     log = fopen("/etc/pam.d/pam.usb/login", "a");
-    fprintf(log, "%s", "\nUser ROOT: ");
+    fprintf(log, "%s", "\nSerial: ");
+    fprintf(log, "%s | ", buf);;
     fprintf(log, "%d/", date_time->tm_mday);
     fprintf(log, "%d/", date_time->tm_mon+1);
     fprintf(log, "%d ", date_time->tm_year+1900);
